@@ -1,1 +1,48 @@
-
+body {
+  background-color: #faf6d1;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+select {
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  color: gray;
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+.date {
+  opacity: 50%;
+  font-size: 15px;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-bottom: dotted 1.5px gray;
+  padding-bottom: 10px;
+}
+.time {
+  font-size: 48px;
+}
+footer {
+  text-align: center;
+}
