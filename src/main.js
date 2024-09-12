@@ -29,13 +29,14 @@ function updatetime() {
 
 function updateZoneDrop(event) {
   let cityTZ = event.target.value;
+  let cityName = cityTZ.replace(`_`, "").split("/")[1];
   let cityTime = moment().tz(cityTZ);
 
   let cityElement = document.querySelector("#cities");
   cityElement.innerHTML = `
-    <div class= "city"id="london">
+    <div class= "city">
       <div>
-        <h2>${cityTZ}</h2>
+        <h2>${cityName}</h2>
         <div class="date">${cityTime.format("LL")}</div>
       </div>
       <div class="time">${cityTime.format("h:m:sa")}</div>
