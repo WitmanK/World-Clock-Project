@@ -26,5 +26,23 @@ function updatetime() {
   warsawDateElement.innerHTML = warsawZone.format("LL");
   warsawTimeElement.innerHTML = warsawZone.format("h:m:sa");
 }
+
+function updateZoneDrop(event) {
+  let cityTZ = event.target.value;
+  let cityTime = moment().tz(cityTZ);
+
+  let cityElement = document.querySelector("#cities");
+  cityElement.innerHTML = `
+    <div class= "city"id="london">
+      <div>
+        <h2>${cityTZ}</h2>
+        <div class="date">${cityTime.format("LL")}</div>
+      </div>
+      <div class="time">${cityTime.format("h:m:sa")}</div>
+    </div>`;
+}
 updatetime();
 setInterval(updatetime, 1000);
+
+let dropdownCitiesElement = document.querySelector("#dropdown");
+dropdownCitiesElement.addEventListener("change", updateZoneDrop);
