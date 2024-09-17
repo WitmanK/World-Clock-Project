@@ -4,6 +4,17 @@ body {
   height: 100%;
   font-family: "Nunito", sans-serif;
 }
+.back-button {
+  color: gray;
+  font-size: 25px;
+  padding: 5px 13px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ff9a9dce;
+  text-decoration-color: black;
+  font-family: "Nunito", sans-serif;
+  text-decoration-line: none;
+}
 html {
   min-height: 100%;
 }

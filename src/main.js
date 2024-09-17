@@ -43,7 +43,9 @@ function updateZoneDrop(event) {
         <div class="date">${cityTime.format("LL")}</div>
       </div>
       <div class="time">${cityTime.format("h:m:sa")}</div>
-    </div>`;
+    </div>
+    <br/>
+    <a href="index.html" class="back-button">Back</a>`;
 }
 updatetime();
 setInterval(updatetime, 1000);
