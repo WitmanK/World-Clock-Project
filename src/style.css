@@ -1,6 +1,11 @@
 body {
-  background-color: #faf6d1;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   font-family: sans-serif;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+}
+html {
+  min-height: 100%;
 }
 .container {
   max-width: 600px;
