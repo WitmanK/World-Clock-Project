@@ -1,12 +1,12 @@
 function updatetime() {
-  //London
-  let londonElement = document.querySelector("#london");
-  let londonDateElement = londonElement.querySelector(".date");
-  let londonTimeElement = londonElement.querySelector(".time");
+  //Amsterdam
+  let amsterdamElement = document.querySelector("#amsterdam");
+  let amsterdamDateElement = amsterdamElement.querySelector(".date");
+  let amsterdamTimeElement = amsterdamElement.querySelector(".time");
 
-  let londonZone = moment().tz("Europe/London");
-  londonDateElement.innerHTML = londonZone.format("LL");
-  londonTimeElement.innerHTML = londonZone.format("h:m:sa");
+  let amsterdamZone = moment().tz("Europe/Amsterdam");
+  amsterdamDateElement.innerHTML = amsterdamZone.format("LL");
+  amsterdamTimeElement.innerHTML = amsterdamZone.format("h:m:sa");
 
   //Tokyo
   let tokyoElement = document.querySelector("#tokyo");
@@ -29,6 +29,9 @@ function updatetime() {
 
 function updateZoneDrop(event) {
   let cityTZ = event.target.value;
+  if (cityTZ === "current") {
+    cityTZ = moment.tz.guess();
+  }
   let cityName = cityTZ.replace(`_`, "").split("/")[1];
   let cityTime = moment().tz(cityTZ);
 
